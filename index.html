@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Base Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Number Base Converter</h1>
+        <h6>By Damia Balqis S.</h6>
+        
+        <div class="info">
+            <span class="info-icon">💡</span>
+            Enter a number and select its base. See instant conversions with step-by-step explanations!
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="numberInput">
+                    <span class="label-icon">📝</span>
+                    Enter Number:
+                </label>
+                <input type="text" id="numberInput" placeholder="Enter a number..." autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="baseSelect">
+                    <span class="label-icon">⚙️</span>
+                    From Base:
+                </label>
+                <select id="baseSelect">
+                    <option value="10">🔢 Decimal (Base 10)</option>
+                    <option value="2">🔁 Binary (Base 2)</option>
+                    <option value="8">🔸 Octal (Base 8)</option>
+                    <option value="16">🔶 Hexadecimal (Base 16)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="resultTable" class="hidden">
+            <h3>📊 Conversion Results</h3>
+            <div class="results-grid" id="resultsGrid">
+                <!-- Results will be inserted here -->
+            </div>
+        </div>
+
+        <div id="explanationSection" class="hidden">
+            <h3>📝 Step-by-Step Process</h3>
+            <div id="explanationContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

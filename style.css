@@ -1,0 +1,321 @@
+/* Modern Learning Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 50%, #81d4fa 100%);
+    padding: 20px;
+    color: #2c3e50;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(44, 122, 123, 0.15);
+    min-width: 450px;
+    max-width: 550px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #2c7a7b;
+    margin-bottom: 8px;
+    font-size: 28px;
+    text-shadow: 0 2px 4px rgba(44, 122, 123, 0.1);
+}
+
+h6 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: #718096;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.info {
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 4px solid #ed8936;
+    font-size: 14px;
+    color: #744210;
+    box-shadow: 0 4px 12px rgba(237, 137, 54, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.input-icon {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* Select Dropdown */
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+    /* Hilangin gaya bawaan */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Tambahin arrow custom */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%232c7a7b' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px; /* kasih ruang untuk arrow */
+}
+
+select:focus {
+    outline: none;
+    border-color: #2c7a7b;
+    box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
+    transform: translateY(-1px);
+}
+
+select:hover {
+    border-color: #4fd1c7;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2c7a7b;
+    box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
+    transform: translateY(-1px);
+}
+
+input:hover, select:hover {
+    border-color: #4fd1c7;
+}
+
+.results-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2c7a7b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.results-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f7fafc;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 122, 123, 0.15);
+    border-color: #2c7a7b;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.base-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2c7a7b;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.base-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.copy-btn {
+    background: #ed8936;
+    color: white;
+    border: none;
+    padding: 4px 10px;   /* lebih kecil */
+    border-radius: 6px;  /* agak kotak */
+    cursor: pointer;
+    font-size: 11px;     /* teks lebih kecil */
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    margin-top: 8px;     /* ada jarak dari kotak atas */
+}
+
+
+.copy-btn:hover {
+    background: #dd6b20;
+    transform: scale(1.05);
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+.result-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a202c;
+    background: #f7fafc;
+    padding: 12px;
+    border-radius: 8px;
+    word-break: break-all;
+    border: 1px solid #e2e8f0;
+    letter-spacing: 0.5px;
+}
+
+#resultTable {
+    margin-top: 30px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+#explanationSection {
+    margin-top: 30px;
+    animation: fadeInUp 0.5s ease-out 0.2s both;
+}
+
+#explanationSection h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2c7a7b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.explanation-step {
+    background: white;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #2c7a7b;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #2d3748;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+.step-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2c7a7b;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.error {
+    color: #e53e3e;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    background: #fed7d7;
+    border-radius: 12px;
+    border: 1px solid #feb2b2;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Copy feedback animation */
+.copy-success {
+    background: #38a169 !important;
+}
+
+.copy-success::after {
+    content: "✓";
+    margin-left: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+        min-width: 0;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .result-value {
+        font-size: 16px;
+    }
+}
